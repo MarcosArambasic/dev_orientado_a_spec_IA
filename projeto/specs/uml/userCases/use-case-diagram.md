@@ -12,11 +12,14 @@ rectangle "Fila Mack" {
   usecase "UC-01\nEmitir senha" as UC01
   usecase "UC-02\nChamar próxima senha" as UC02
   usecase "UC-03\nFinalizar atendimento" as UC03
+  usecase "UC-04\nConsultar estado da fila" as UC04
 }
 
 Aluno --> UC01
-Atendente --> UC02
 Atendente --> UC03
+Atendente --> UC02
+Aluno --> UC04
+Atendente --> UC04
 @enduml
 ```
 

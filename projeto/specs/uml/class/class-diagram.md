@@ -7,7 +7,7 @@ skinparam classAttributeIconSize 0
 
 enum TicketStatus {
   WAITING
-  IN_SERVICE
+  CALLED
   FINISHED
 }
 
@@ -24,7 +24,7 @@ class QueueService {
   -currentTicket: Ticket
   -nextNumber: Number
   +issueTicket(): Ticket
-  +getNext(): Ticket
+  +callNext(): Ticket
   +finishCurrent(): Ticket
   +getSnapshot(): QueueSnapshot
 }

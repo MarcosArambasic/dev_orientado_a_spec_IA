@@ -36,6 +36,24 @@ Para cada item, localize o arquivo, confirme ou rejeite o problema usando os dem
 Existem exatamente quatro inconsistências planejadas. Não procure outras e não altere os diagramas de sequência. Responda com uma tabela curta.
 ```
 
+```
+
+
+Leia BRIEF.md, PROJECT.md, PROTOCOL.md, VALIDATION.md e specs/uml.
+Não edite arquivos.
+
+Encontramos estes quatro trechos possivelmente inconsistentes:
+
+1. QUARTO CASO DE USO NÃO FOI DECLARADO
+2. FUNÇÃO DE REOPEN SAINDO DO ESTADO DE TICKET FINALIZADO
+3. NOME DIFERENTE ENTRE O DIAGRAMA DE ESTADO E O DIAGRAMA DE CLASSE (IN_SERVICE -> CALLED)
+4. FUNÇÃO CALLNEXT() DEVERIA SER GETNEXT()
+
+Para cada item, localize o arquivo, confirme ou rejeite o problema usando os demais artefatos como evidência e indique a correção mínima.
+
+Existem exatamente quatro inconsistências planejadas. Não procure outras e não altere os diagramas de sequência. Responda com uma tabela curta.
+```
+
 ## 2 — Corrigir os quatro problemas
 
 ```text

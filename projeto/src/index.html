@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#f4f7fb">
+    <title>Fila Mack</title>
+    <link rel="stylesheet" href="./styles.css">
+    <script type="module" src="./app.mjs"></script>
+  </head>
+  <body>
+    <main class="page-shell">
+      <header class="page-header">
+        <div>
+          <p class="eyebrow">Atendimento acadêmico</p>
+          <h1>Fila Mack</h1>
+          <p class="intro">Acompanhe a fila e organize os atendimentos por ordem de chegada.</p>
+        </div>
+        <div class="header-actions">
+          <button class="theme-toggle" id="theme-toggle" type="button">
+            <span aria-hidden="true" class="theme-icon">☾</span>
+            <span id="theme-toggle-label">Ativar tema escuro</span>
+          </button>
+          <span class="queue-badge"><span aria-hidden="true" class="status-dot"></span> Fila presencial</span>
+        </div>
+      </header>
+
+      <section class="controls panel" aria-labelledby="actions-title">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">Operações</p>
+            <h2 id="actions-title">Gerenciar fila</h2>
+          </div>
+          <p class="section-hint">As senhas são chamadas em ordem de emissão.</p>
+        </div>
+        <div class="button-group">
+          <button class="button button-primary" id="issue-button" type="button">
+            <span aria-hidden="true" class="button-icon">+</span>
+            Emitir senha
+          </button>
+          <button class="button button-secondary" id="call-button" type="button">Chamar próxima</button>
+          <button class="button button-quiet" id="finish-button" type="button">Finalizar atendimento</button>
+        </div>
+        <p class="message" id="message" role="status" aria-live="polite">A fila está pronta para receber senhas.</p>
+      </section>
+
+      <section class="current panel" aria-labelledby="current-title">
+        <div class="current-copy">
+          <p class="eyebrow">Agora</p>
+          <h2 id="current-title">Em atendimento</h2>
+          <p id="current-description">Nenhuma senha está sendo atendida.</p>
+        </div>
+        <p class="current-number" id="current-number" aria-label="Senha atual">—</p>
+      </section>
+
+      <section class="ticket-columns" aria-label="Situação das senhas">
+        <section class="ticket-panel panel" aria-labelledby="waiting-title">
+          <div class="list-heading">
+            <div>
+              <p class="eyebrow">Próximos</p>
+              <h2 id="waiting-title">Aguardando</h2>
+            </div>
+            <span class="count" id="waiting-count" aria-label="Quantidade aguardando">0</span>
+          </div>
+          <ul class="ticket-list" id="waiting-list"></ul>
+          <p class="empty-state" id="waiting-empty">Nenhuma senha aguardando.</p>
+        </section>
+
+        <section class="ticket-panel panel" aria-labelledby="finished-title">
+          <div class="list-heading">
+            <div>
+              <p class="eyebrow">Concluídos</p>
+              <h2 id="finished-title">Finalizadas</h2>
+            </div>
+            <span class="count count-muted" id="finished-count" aria-label="Quantidade finalizada">0</span>
+          </div>
+          <ul class="ticket-list" id="finished-list"></ul>
+          <p class="empty-state" id="finished-empty">Nenhuma senha finalizada.</p>
+        </section>
+      </section>
+
+      <footer class="page-footer">Fila única · Atendimento por ordem de chegada</footer>
+    </main>
+  </body>
+</html>

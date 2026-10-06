@@ -5,7 +5,6 @@
 [*] --> WAITING : issueTicket()
 WAITING --> CALLED : callNext() / call()
 CALLED --> FINISHED : finishCurrent() / finish()
-FINISHED --> WAITING : reopen()
 FINISHED --> [*]
 
 WAITING : senha está na fila
